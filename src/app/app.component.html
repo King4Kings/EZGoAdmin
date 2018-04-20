@@ -1,20 +1,57 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<!-- The content below is only a placeholder and can be replaced-->
 
+<!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!-- Include the above in your HEAD tag  -->
+
+<!-- <div class="container">
+    <div class="row-fluid">
+        <div class="col-md-12">
+        	<iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed/v1/place?q=Cyberborg%20Bodyart%2C%20Bangka%2C%20Jakarta%2C%20Indonesia&key=AIzaSyCGz8WzqxQw1OwHWey3LCTjqKFG9feCxP4"></iframe>
+    	</div>
+    </div>
+</div> -->
+
+<!-- <div class="container-fluid">
+  <div style="color: blue;">
+  <h1>Firebase</h1>
+  </div>
+
+  <table class="table">
+    <caption>List of Cabs and Users</caption>
+    <thead>
+      <tr>
+        <th scope="col">cab</th>
+        <th scope="col">startAddress-city</th>
+        <th scope="col">startAddress-street</th>
+        <th scope="col">endAddress-city</th>
+        <th scope="col">endAddress-street</th>
+        <th scope="col">startTimeStamp</th>
+        <th scope="col">users</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr *ngFor="let trip of trips | async">
+          <td>{{trip.cab}}</td>
+          <td>{{trip.startAddress.city}}</td>
+          <td>{{trip.startAddress.street}}</td>
+          <td>{{trip.endAddress.city}}</td>
+          <td>{{trip.endAddress.street}}</td>
+          <td>{{trip.startTimeStamp}}</td>
+          <td>{{trip.users}}</td>
+      </tr>
+      </tbody>
+    </table>
+  
+
+<div class="col-md-3">
+    <p *ngFor="let trip of trips | async">{{trip | json }}</p>
+</div> -->
+
+<app-leftnav></app-leftnav>
+<div id="wrapper">
+  <app-header></app-header>
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+</div>

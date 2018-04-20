@@ -1,0 +1,73 @@
+
+body { background: #fff;}
+h1, h2, h3, h4 , h5 { color: #666;}
+h1.yl, h2.yl, h3.yl, h4.yl , h5.yl { color: #f7b100;}
+
+#topbar { background: #fc3; }
+#header { background: #fff; box-shadow: inset 0 -20px 60px -20px rgba(0,0,0,0.1), 0 4px 4px rgba(0,0,0,0.2); }
+#header:after {
+	background: #f2992e; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left, #fc3 , #c3002f); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(right, #fc3 , #c3002f); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right, #fc3 , #c3002f); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to right, #fc3 , #c3002f); /* Standard syntax */
+} 
+
+/************************************app*********************/
+
+
+/***************************************************************/
+
+#header #logo_group_reg { color: #FC3;}
+#header  #logo_group_reg  #logo_group em{ color: #333; }
+
+#header .logo { color: #222;}
+#header  .logo  em{ color: #fc3;  }
+
+.boxtitle { color: #999;}
+
+#main_nav em { color: #FC3;}
+#main_nav .li-1>a:hover, #main_nav .li-1>span:hover { color: #333;  }
+.language-info  select, .language-info   input{ background-color: transparent; border-color: rgba(0,0,0,0.1);}
+
+#wrapper button, #wrapper .button, #wrapper button:hover, #wrapper button:focus, #wrapper .button:hover, #wrapper .button:focus,
+.reveal button, .reveal .button, .reveal button:hover, .reveal button:focus, .reveal .button:hover, .reveal .button:focus { background: #c3002f; color: #fff; }
+
+table thead, table tbody, table tfoot {border: 1px solid #f1f1f1;background-color: #fefefe;}
+
+.r-info-y { color: #fc3; }
+.r-s-but  { color: #999; }
+
+#wrapper table thead tr th, #wrapper table thead tr td, #wrapper table tbody tr th { background: #e0e0e0; }
+#wrapper table thead tr th a, #wrapper table thead tr td a, #wrapper table tbody tr th a, #wrapper table tbody tr td a { color: #f7b100; }  
+
+#wrapper table thead tr th, #wrapper table thead tr td, #wrapper table tbody tr th, #wrapper table tbody tr td { border-width: 1px 1px 1px 0; border-color: #666; border-style: solid; }  
+#wrapper table thead tr th:first-child, #wrapper table thead tr td:first-child, #wrapper table tbody tr th:first-child, #wrapper table tbody tr td:first-child { border-width: 1px 1px 1px 1px; }  
+
+#LoginWrapper { background: #fc3; }
+
+.all-theme.cl-sg  #topbar {
+	background: #f2992e; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left, #fc3 , #c3002f); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(right, #fc3 , #c3002f); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right, #fc3 , #c3002f); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to right, #fc3 , #c3002f); /* Standard syntax */
+}
+
+@media (min-width: 60em){
+	#header .logo { color: #666;}
+	#header  .logo  em{ color: #FC3; }
+}
+
+
+@media only screen and (min-device-width: 800px) and (max-device-width: 1280px) and (min-height: 800px) {
+	#header .logo { color: #666;}
+	#header  .logo  em{ color: #FC3; }
+}
+
+
+@media screen and (min-width: 601px){
+	#LoginWrapper { background: url('../../images/login_bg_pg.png') repeat 50% 50% #fc3; }
+}
+
+.title-hd  h1, .title-hd  h2, .title-hd  h3, .title-hd  h4 { color: #c3002f; }

@@ -1,0 +1,125 @@
+
+body { margin: 0; padding: 0; direction: ltr; text-align: left; word-wrap: break-word; }
+
+
+/***********************************************/
+/*******************************************/
+
+.sum-info { padding: 60px 20px 0 20px; position: relative; text-align: center; height: 100px; box-sizing: border-box; width: 20%; float: left; overflow: hidden;}
+.ap-ic { position: absolute; width: 50px; right: 0; height: 50px; top: 0; bottom: 0; left: 0; margin: 0 auto;}
+.ap-ic:after { content:""; display: block; position: absolute; width: 50px; height: 50px; top: 0; bottom: 0; right: 0; left: 0; margin: 0 auto 0 0; background-image: url('../../images/icon_sprite.png');}
+
+.sum-info > P { margin: 0; font-size: 1.25rem;  font-weight: 700; line-height: 1rem;} 
+.sum-info > P span.value{ font-size: 2rem; margin: 0 0.5rem; font-weight: 700;} 
+
+.ap-ic.alert:after { background-position: 0 0; }
+.ap-ic.running:after { background-position: -100px 0; }
+.ap-ic.remaining:after { background-position: -150px 0; }
+.ap-ic.finished:after { background-position: -200px -50px; }
+.ap-ic.total:after { background-position: -50px 0; }
+
+.ap-ic.alert ~ P span.value { color: red; }
+.ap-ic.running ~ P span.value { color: orange; }
+.ap-ic.remaining ~ P span.value { color: grey; }
+.ap-ic.finished ~ P span.value { color: green;  }
+.ap-ic.total ~ P span.value { color: blue; }
+
+.title-hd { overflow: hidden; margin: 0; } 
+
+.search-box { width: 410px; height: 2rem; box-sizing: content-box; padding: 1px 0;}
+.search-box  > input[type='text'] { width: 300px; height: 2rem; line-height: 1rem; padding: 0.5rem 1rem 0.5rem 0.5rem; margin: 0;  border: 1px solid #c3002f; box-sizing: border-box; position: relative; top: -2px; left: 0; outline: none;}
+.search-box  > button, .search-box  > .button { width: 100px; height: 2rem; line-height: 1rem; padding: 0.5rem; margin: 0 -2px; text-align: center; font-size: 1rem;  box-sizing: border-box; outline: none; border: 1px solid #c3002f; position: relative; top: -1px; left: -2px; background: #c3002f; color: #fff !important; font-weight: 700; text-transform: uppercase; box-shadow: inset 0 -20px 20px rgba(0,0,0,0.1), inset 0 -6px 12px rgba(0,0,0,0.1); cursor: pointer;}
+
+
+.alertbox { padding: 0.75rem 1rem 0; border: 1px solid #ddd; margin: 0.125rem 0.125rem 0.5rem; box-shadow: 0 2px 2px rgba(0,0,0,0.2);}
+
+.alertbox .al-id-info { width: 90px; float: left; margin: 0;}
+.alertbox .al-type-info { margin: 0 0 0 90px;}
+
+.alertbox small { font-weight: 700; color: #c3002f; font-size: 75%; }
+.alertbox p small { display: block; }
+.alertbox h4 { font-size: 1.5rem; color: #c3002f; margin: 0.125rem 0; }
+.alertbox h4 small { font-size: 75%; }
+
+.alertbox  .act-bt-reg { margin: 0.25rem -1rem -2px; box-sizing: border-box; overflow: hidden; }
+.alertbox  .act-bt-reg  .act-btn { width:25%; height: 90px; float: left; box-sizing: border-box; font-size: 0.875rem; text-align: center; padding: 3rem 0.325rem 0.125rem; border: 1px solid #ccc; border-width: 1px 0 1px 1px; cursor: pointer; background-color: #fff; position: relative; margin: 0; font-weight: 500; color: #555;}
+.alertbox  .act-bt-reg  .act-btn:first-child {border-width: 1px 0 1px 0; }
+
+.alertbox  .act-bt-reg  .act-btn:hover, .alertbox  .act-bt-reg  .act-btn:focus { background-color: #eee;}
+.alertbox  .act-bt-reg  .act-btn small { display: block; font-weight: 700;  }
+
+.alertbox  .act-bt-reg  .act-btn:after { content:""; display: block; position: absolute; width: 50px; height: 50px; top: 0; bottom: 0; right: 0; left: 0; margin: 0 auto 0 auto; background-image: url('../../images/icon_sprite.png');}
+
+.act-btn.monitor-trip:after { background-position: 0 -50px; }
+.act-btn.call-driver:after { background-position: -50px -50px; }
+.act-btn.call-emp:after { background-position: -100px -50px; }
+.act-btn.arrange-help:after { background-position: -150px -50px; }
+
+
+/*****************************************************/
+@media (min-width:30.0625rem) {
+
+
+}
+
+@media all and (min-width: 37.5rem){
+
+
+}
+
+@media all and (min-width: 48rem){
+
+  
+  
+}
+
+
+
+@media all and (min-width:60rem){
+
+ 
+}
+
+/*******foundation********************/
+
+@media only screen and (min-width: 37.5rem) and (max-width: 63.9375rem) {
+
+ 
+}
+
+@media only screen and (min-width: 40.0625rem) {	
+	
+}
+
+
+@media only screen and (min-width: 64.0625rem) {
+	
+}
+
+@media all and (min-width: 76rem){
+
+
+
+}
+
+
+
+
+@media screen and (max-width: 1024px){
+	.search-box > input[type='text'] { top: -3px; }
+	
+
+}
+
+@media screen and (min-width: 801px) {
+ 
+
+
+}
+@media screen and (min-width:1281px) {
+
+.sum-info { padding: 8px 80px 8px 10px; text-align: right; height: 60px; width: 100%; float: none; }
+.sum-info:last-child { border-top: 1px solid #ccc; padding: 16px 80px 8px 10px;}
+.ap-ic { left: auto; margin: auto;}
+
+}

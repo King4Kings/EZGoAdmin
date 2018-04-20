@@ -1,0 +1,275 @@
+
+html { position: fixed; width: 100%; height: 100%; }
+body { margin: 0; padding: 0; direction: ltr; text-align: left; word-wrap: break-word; }
+
+body { width: 100%; height: 100%; overflow: auto; position: relative;}
+html, body{height: 100%}
+
+body > div { position: relative; height: 100%; overflow-x: auto;}
+
+/******************Global***********************/
+
+img { margin: 0; max-width: 100%; border: 0 solid transparent; }
+h1, h2, h3, h4 , h5 { margin: 0; padding: 0;  }
+
+* { -webkit-transition: all .2s 1s, visibility 0s 0s; -moz-transition: all .2s 1s, visibility 0s 0s; 	transition: all .2s 0s, visibility 0s 0s;}
+
+/**************Skeleton*********************/
+#LoginWrapper { width: 100%; height: 100%; margin: 0; direction: ltr; text-align: left; position: fixed; left: 0; right: 0; top: 0; bottom: 0; z-index: 5;}
+#LoginWrapper.logged-in { display: none;    }
+
+#wrapper { width: auto; height: 100%; margin: 0 1px 0 200px; direction: ltr; text-align: left; overflow: auto; overflow-x: hidden; position: relative; box-sizing: border-box; padding: 0 2px 0 0; min-width: 980px;}
+.container { width: 99.92%; margin: 0 0rem; position: relative;}
+#topbar { width: 100%; height: 2rem; line-height: 2rem; color: #111;  font-size: 0.875em; position: relative; z-index: 4; display: none;}
+#header { width: 100%; height: 3.75rem; position: absolute; z-index: 4; margin: 0 0 4px; top: 0;}
+#main_nav { width: 100%; /*position: absolute; top: 7.25rem; */  height: 3.25rem; padding: 0.5rem 1rem 2rem; z-index: 5; /* display: none; */ background: #f9f9f9; border-width: 1px 0; border-style:solid; border-color: #ccc; margin: -6px 0 10px; z-index: 4; position: absolute; top: 102px;}
+#breadcrumreg { width: 100%; height: 32px; background: #eae9e8; border-bottom: 1px solid #d2d0cd; margin: -10px 0 0; position: absolute; z-index: 2; top: 158px;}
+#breadcrumreg { /* display: none; */ }
+#content-region { position: absolute; z-index: 3; width: auto; height: auto; background: #fff; top: 60px; bottom: 32px; overflow: auto; overflow-x: hidden; left: 0; right: 0; padding: 0;}
+#footer { width: auto; height: 1.65rem; position: absolute; top: auto; left: 0; right: 0; bottom: 0; border-top: 1px solid #ccc; background: #f1f1f1; z-index: 6; padding: 0 8px 0;}
+
+#wrapper { /* padding-top: 6.375rem; */}
+
+
+#topbar .container,
+#header .container,
+#main_nav .container,
+#breadcrumreg .container,
+#footer  .container { height: 100%; }
+
+/*****************Header************************/
+
+#header:after { width: 100%; height: 2px; position: absolute; bottom: -2px; left: 0; right: 0; top: auto; content: ""; display: block;}
+
+/*****************************************************/
+
+/****************Content*************************/
+
+
+
+
+/**************footer*************************/
+
+#footer-tabs { width: 100%; height: 100%; position: relative; overflow: hidden;}
+
+.footer-links-right { margin: 0 0 0 0; float: right; /* font-family: sans-serif; */ padding: 0 0 0; font-size: 0.75em; line-height: 1.5rem;}
+.footer-links-right a { position: relative; display: inline-block; height: 16px; padding: 0 0; vertical-align: middle;  text-decoration: underline; color: #6c6f70;}
+
+#footer-tabs .ft-buttons { width: 25%; height: 100%; float: left; background: rgba(100,100,100,0.1); box-shadow: inset -1px 0 0 rgba(10,10,10,0.2), inset 1px 0 0 rgba(250,250,250,0.2); cursor: pointer; }
+#footer-tabs .ft-buttons:hover { background: rgba(250,180,0,0.6);  }
+
+
+/******************Navigation*****************/
+
+/*************Map region**************/
+#Mapregion { width: 100%; height: 400px; position: relative; border: 1px solid #ccc;}
+#RightInfo { width: 100%; height: 120px; top: 0; right: 0; bottom: 0; background: rgba(255,255,255,0.9); position: relative; z-index: 2; border-width: 0 0 1px; border-style: solid; border-color:  #ccc; box-sizing: border-box; padding: 0.5rem 1rem; overflow: hidden;}
+#Mapregion  .gmaps { width: 100%; height: 280px; }
+
+/********************infoContent *********************/
+#infoContent { position: absolute; top: 410px; left: 10px; right: 300px; bottom: 0;  border-width: 0 1px 0 0; border-style: solid; border-color: #ddd;}
+#alertContent { position: absolute; top: 410px; width: 280px; left: auto; right: 10px; bottom: 0; }
+
+.in-cont-region { position: absolute; width: auto; height: auto; top: 40px; left: 0; right: 0; bottom: 0; overflow: auto;}
+
+.fl-row { overflow: hidden; }
+.fl-row::before, .fl-row::after {content: ' ';display: table; }
+.fl-row:after {clear: both; }
+
+
+
+/**************************Modal*****************************************/
+
+.reveal  .modalhead  { padding: 0.5rem 1rem;  background: #fc3; margin: -1rem -1rem 1rem; font-size: 1.25rem; line-height: 1.5rem; font-weight: 400; color: #333; text-shadow: 0 1px 0 rgba(255,255,255,0.6); box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1), inset 0 -10px 20px -10px rgba(0,0,0,0), 0 2px 2px rgba(0,0,0,0.4);}
+
+
+/*****************************************************************************************/
+
+::-ms-clear { display: none; }
+
+
+
+/******************loader*************************************/
+
+.loader { width: 100%; height: 100%; background: rgba(0,0,0,0.6); position: absolute; left: 0; right: 0; top: 0; bottom: 0; z-index: 112; display:none}
+/* .loader:after { width: 100px; height: 100px; background: url('../../images/ajax-loader.gif') no-repeat scroll 50% 50% transparent; position: absolute; left: 50%; top: 50%; z-index: 1; margin: -50px 0 0 -50px; content: ''; }  */
+
+/******************************************************/
+
+.btn-rgn:after, .btn-rgn:before { content: " "; display: table; }
+.btn-rgn::after { clear: both; }
+/***********************************************/
+
+/*********************************/
+#Side-nav { position: absolute; width: 200px; left: 0; right: auto; top: 0; bottom: 0; height: 100%; z-index: 124; background: #888; box-shadow: 0 0 10px rgba(0,0,0,0.5); margin: 0 0 0 0; }
+#Side-nav.s-nav-active { margin: 0 0 0 0; }
+
+#Side-nav #Side-nav-head { height: 60px; box-sizing: border-box; padding: 0.5rem 1rem;}
+#Side-nav #Side-nav-head #AppLogo { width: 160px; height: 40px; display: block; background: url('../../images/ezgo_admin_logo_white.png')no-repeat scroll 50% 50% transparent; margin: auto auto auto 0;}
+
+.overlay-main { width: auto; height: auto; position: absolute; background: rgba(0,0,0,0.5); top: 0; bottom: 0; left: 0; right: 0; z-index: 12; display: none;} 
+
+
+
+/*********************************************/
+
+ul.side-nav { list-style: none; padding: 0; margin: 0; }
+ul.side-nav  li { list-style: none; padding: 0; margin: 0; border-width: 1px 0 1px; border-style: solid; border-color: #929292 transparent #686868;  line-height: 3rem; text-transform: uppercase;}
+ul.side-nav li a { padding: 0 1rem 0 3rem; text-align: left; display: block; font-size: 1rem; color: #fff; /* font-family: helv-37, arial, sans-serif; */ font-weight: 700; cursor: pointer;}
+
+ul.side-nav li a:hover, ul.side-nav li a:focus, ul.side-nav li:hover a { color: #ACACAC;}
+
+
+/**********************************************/
+
+ul.side-nav li.m-active a, ul.side-nav li.m-active a:hover, ul.side-nav li.m-active a:focus { background: #555; color: #fff; box-shadow: inset 10px 0 20px rgba(0,0,0,0.1);}
+
+ul.side-nav li.m-active { position: relative; border-color: #353535 transparent #686868;}
+ul.side-nav li.m-active:after {  width: 0; height: 0; border-width: 12px 0 12px 12px; border-style: solid;   border-color: transparent #555; display: block; content: ""; position: absolute;   right: -12px; top: 50%; margin: -12px 0 0 0; }
+
+
+.main-content { display: none;}
+.main-content.mc-active { display: block;}
+
+/***********************************************/
+
+#loading { background: 0 0; -webkit-transition: .3s ease-out;transition: .3s ease-out;opacity: 0.9; z-index: 999999; position: fixed; top: 0;left: 0;right: 0;bottom: 0;}
+#loading .loading-circle {width: 50px;height: 50px;position: absolute;margin: auto; background: rgba(0,0,0,0);border-radius: 50%; top: 0;left: 0;right: 0;bottom: 0;}
+#loading .spinner {box-sizing: border-box; background: rgba(0,0,0,0); height: 100%;width: 100%; border-radius: 50%;border-right: 4px solid #f7b100;border-top: 4px solid transparent;border-left: 4px solid transparent;border-bottom: 4px solid transparent;-webkit-animation: rotate 1s infinite;animation: rotate 1s infinite;}
+#loading .inner-circle {width: 90%;height: 90%; background: rgba(0,0,0,0.2);border-radius: 50%;margin: auto;vertical-align: middle;position: absolute;  top: 0; left: 0;right: 0;bottom: 0;}
+
+@-webkit-keyframes rotate{from{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}
+@keyframes rotate{from{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}
+
+#wrapper hr { max-width: inherit; margin: 0.25rem 0 0.25rem;}
+/***********************************************/
+.cont-row { max-width: 90rem;  margin-left: auto;  margin-right: auto; padding: 0.25rem 1rem 0.25rem 0.25rem; }
+.cont-row::before, .cont-row::after {content: ' ';display: table; }
+.cont-row::after {clear: both; }
+.cont-row .cont-row {max-width: none;margin-left: 0;margin-right: 0; }
+
+.left-float { float: left; }
+.right-float { float: right; }
+
+.tab-x-scroll {overflow: auto;padding: 1rem 0.5rem;}
+
+.zui-table { border-collapse: collapse;border-spacing: 0;background: #666;margin: 0 0 0;width: 100%;}
+#wrapper table.zui-table thead th, .reveal table.zui-table thead th {padding: 0;}
+.zui-table tbody.body_panel > tr > td > div {padding: 0.25rem 0.5rem;}
+
+.table-reg-main { position: relative; padding: 2rem 0 0 0; z-index: 1; width: 100%;}
+.table-reg-main:after { position: absolute; background: #ccc; border: 1px solid #444; content: ""; display: block; left: 0; right: 0; top: 0; height: 2rem; z-index: -1;}
+.table-reg-in { max-height: 200px; overflow-y: auto; border-bottom: 1px solid #444;}
+
+.sticky-th { position: absolute; top: 0; padding: 0 0.5rem; color: #444; line-height: 2rem; height: 2rem; vertical-align: middle; display: table-cell; border-left: 1px solid #444; margin: 0 0 0 -1px;}
+.sticky-th a, .sticky-th a:hover, .sticky-th a:visited  { color: #444; }
+
+.hidden { display: none !important; }
+
+/******************************************/
+
+
+@media (min-width: 30rem) {
+
+
+}
+
+@media (min-width:30.0625rem) {
+
+}
+
+@media all and (min-width: 37.5rem){
+.container { /* width: 96%; */}
+
+}
+
+@media (min-width: 48rem){
+.container { /* width: 96%; */}
+
+#header { width: 100%; /*height: 7.5rem;*/ }
+
+
+}
+
+
+
+@media (min-width: 60rem){
+
+
+
+
+}
+
+/*******foundation********************/
+@media only screen and (min-width: 40.0625rem) {
+
+
+	
+}
+
+@media only screen and (min-width: 48rem) and (max-width: 60rem) {
+
+}
+
+@media only screen and (min-width: 60rem) and (max-width: 64rem) {
+
+}
+
+
+@media only screen and (min-width: 64.0625rem) {
+
+	
+}
+
+@media all and (min-width: 76rem){
+
+
+}
+
+
+@media only screen and (min-device-width: 800px) and (max-device-width: 1280px) and (min-height: 800px) {
+
+  
+  
+
+}
+
+@media only screen and (min-width: 48rem) and (max-width: 59.9375rem) {
+
+
+ 
+}
+
+@media screen and (max-width: 0rem), screen and (min-width: 40rem) {
+
+ 
+
+}
+
+@media screen and (max-width: 1024px){
+	body > div { zoom: 1 }
+	#wrapper { margin: 0 1px 0 140px; zoom: 0.85;}
+	#Side-nav { position: absolute; width: 120px;}
+	ul.side-nav li a { font-size: 0.75rem; padding: 0 0.5rem 0 1rem;}
+	#Side-nav #Side-nav-head #AppLogo {    width: 100px;    height: 40px;    background-size: contain;}
+	
+}
+
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */
+	.container { margin: 0 auto; position: relative;}
+	
+}
+
+
+@media (min-width:1281px) {
+	#Side-nav { width: 300px;}
+	#wrapper { margin: 0 1px 0 300px;}
+	#Mapregion { height: 320px;}
+	#RightInfo { width: 300px; height: 100%; top: 0; right: 0; bottom: 0; position: absolute; padding: 0.75rem 1rem; border-width: 0 0 0 1px; }
+	.sum-info {padding: 10px 100px 10px 0;position: relative;text-align: right;height: 64px;box-sizing: border-box;}
+	#Mapregion .gmaps {width: auto;height: 100%;margin: 0 298px 0 0;}
+	#infoContent { position: absolute; top: 330px; left: 10px; right: 297px;bottom: 0; resize: none;}
+	#alertContent { position: absolute; width: 276px; top: 330px; left: auto; right: 12px;bottom: 0; resize: none;}
+
+}
+

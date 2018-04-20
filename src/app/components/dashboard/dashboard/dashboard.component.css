@@ -1,0 +1,24 @@
+.table th, .table td{
+    border-top: 1px solid #dee2e6 !important;
+    font-size: 16px !important;
+    padding: 5px !important;
+}
+.table th{
+    border:1px solid #666;
+    background-color:#666 !important;
+    color: #fff;
+}
+.table tr td{
+    border-bottom:1px solid #ccc !important;
+    border-top:0px !important;
+    border-left:0px !important;
+    border-right:0px !important; 
+}
+h1{
+    font-size:36px; 
+    font-weight:700;
+    color: red
+}
+.main-content.mc-active{
+    margin-top:10px !important;
+}

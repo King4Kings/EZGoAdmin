@@ -1,0 +1,84 @@
+<div id="content-region" class="main-section">
+<app-rightinfo></app-rightinfo>
+<!-- <div class="infoContent"> -->
+<div id="DashboardScreen" class="main-content mc-active">
+<div class="container-fluide">
+    <div class="col-lg-12 col-md-12 ">
+        <div class="section-bg">
+          <!--Page Title started here-->
+          <div class="row pg-header">
+            <div class="col col-md-4 col-lg-4 ">
+              <h1>Current Trips</h1>
+          </div>
+            <div class="col col-md-8 col-lg-8 text-right ">
+              <input placeholder="Search ..." type="text" class="search form-control">
+            </div>
+          </div>
+          <!--End of the page title-->
+    
+          <!--Table started here-->
+          <table class="table table-striped mrg-top">
+            <thead>
+              <tr>
+                    <th scope="col">Trip ID</th>
+                    <th scope="col">Employee Name</th>
+                    <!-- <th scope="col">IPN</th> -->
+                    <th scope="col">Start point</th>
+                    <th scope="col">End point</th>
+                    <th scope="col">Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- <tr *ngFor="let item of formatedUser">
+                  <td>{{item.trip.id}}</td>
+                  <td>{{item.user.name}}</td>
+                  <td>{{item.user.zID}}</td>
+                  <td>{{item.trip.startAddress.city}}</td>
+                  <td>{{item.trip.endAddress.city}}</td>
+                  <td>{{item.trip.startTimeStamp}}</td>
+                </tr> -->
+                    <tr *ngFor="let trip of trips | async; let myIndex = index">
+                            <td>{{trip.id}}</td>
+                            <td>{{getUserName(myIndex)}}</td>
+                            <!-- <td>{{getZid(myIndex)}}</td> -->
+                            <td>{{trip.startAddress.city}}</td>
+                            <td>{{trip.endAddress.city}}</td>
+                            <td>{{trip.startTimeStamp}}</td>
+                            
+                  </tr>
+           </tbody>
+        </table>
+
+    
+      </div>
+    
+    </div>
+
+<!-- <table class="table">
+        <caption>List of Cabs and Users</caption>
+        <thead>
+          <tr>
+            <th scope="col">cab</th>
+            <th scope="col">startAddress-city</th>
+            <th scope="col">startAddress-street</th>
+            <th scope="col">endAddress-city</th>
+            <th scope="col">endAddress-street</th>
+            <th scope="col">startTimeStamp</th>
+            <th scope="col">users</th>
+          </tr>
+        </thead>
+        <tbody>
+              <tr *ngFor="let trip of trips | async">
+              <td>{{trip.cab}}</td>
+              <td>{{trip.startAddress.city}}</td>
+              <td>{{trip.startAddress.street}}</td>
+              <td>{{trip.endAddress.city}}</td>
+              <td>{{trip.endAddress.street}}</td>
+              <td>{{trip.startTimeStamp}}</td>
+              <td>{{trip.users}}</td>
+          </tr>
+          </tbody>
+        </table> -->
+</div>
+</div>
+</div>

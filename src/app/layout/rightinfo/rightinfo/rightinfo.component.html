@@ -1,0 +1,83 @@
+    <!--- Map region Starts Here -->
+    <div id="Mapregion">
+        <div class="gmaps">
+            <agm-map  [latitude]="lat" [longitude]="lng">
+                <agm-marker
+                    *ngFor="let user of users | async"
+                    [latitude]="user.position.lat"
+                    [longitude]="user.position.long">
+                  </agm-marker>
+            </agm-map>
+      <!-- <agm-map 
+        [latitude]="lat"
+        [longitude]="lng"
+        [zoom]="zoom"
+        [disableDefaultUI]="false"
+        [zoomControl]="false"
+        (mapClick)="mapClicked($event)">
+      
+        <agm-marker 
+            *ngFor="let m of markers; let i = index"
+            (markerClick)="clickedMarker(m.label, i)"
+            [latitude]="m.lat"
+            [longitude]="m.lng"
+            [label]="m.label"
+            [markerDraggable]="m.draggable"
+            (dragEnd)="markerDragEnd(m, $event)">
+            
+          <agm-info-window>
+            <strong>InfoWindow content</strong>
+          </agm-info-window>
+          
+        </agm-marker>
+        
+        <agm-circle [latitude]="lat + 0.3" [longitude]="lng" 
+            [radius]="5000"
+            [fillColor]="'red'"
+            [circleDraggable]="true"
+            [editable]="true">
+        </agm-circle>
+      
+      </agm-map> -->
+    </div>
+      <!--  Right Info Starts  Here -->
+      <div id="RightInfo">
+        <!-- 1 start-->
+        <div class="sum-info">
+          <span class="ap-ic alert">&nbsp;</span>
+          <p><span class="value">3</span><span>Trips</span></p>
+          <small>Required Attention now</small>
+        </div>
+        <!--- 1 End --->
+        <!-- 2 Start -->
+        <div class="sum-info">
+          <span class="ap-ic running">&nbsp;</span>
+          <p><span class="value">6</span><span>Trips</span></p>
+          <small>Currently running now</small>
+        </div>
+        <!--- 2 End --->
+        <!-- 3 Start -->
+        <div class="sum-info">
+          <span class="ap-ic remaining">&nbsp;</span>
+          <p><span class="value">11</span><span>Trips</span></p>
+          <small>Remaining Trips today</small>
+        </div>
+        <!--- 3 End --->
+        <!-- 4 Start -->
+        <div class="sum-info">
+          <span class="ap-ic finished">&nbsp;</span>
+          <p><span class="value">8</span><span>Trips</span></p>
+          <small>Finished Trips today</small>
+        </div>
+        <!--- 4 End --->
+        <!--5 Start -->
+        <div class="sum-info">
+          <span class="ap-ic total">&nbsp;</span>
+          <p><span class="value">36</span><span>Trips</span></p>
+          <small>Total Trips today</small>
+        </div>
+        <!-- 5 End -->	
+      </div>
+      <!--   Right Info Ends  Here -->
+    </div>
+      
