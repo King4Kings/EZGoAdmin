@@ -5,5 +5,8 @@ export class TripList {
     endtAddressCity:string;
     endAddressStreet:string;
     startTimeStamp:string;
+    endPosition:any;
+    id:any;
     users: any;
+    isTrip:boolean;
 }

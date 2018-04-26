@@ -1,0 +1,10 @@
+<div id="content-region" class="main-section"> 
+    <div id="Mapregion">
+        <app-rightinfo></app-rightinfo>
+        <div class="gmaps">
+        <agm-map [latitude]="lat" [longitude]="lng">
+            <agm-direction *ngIf="dir" [origin]="dir.origin" [destination]="dir.destination"></agm-direction>
+        </agm-map>
+    </div>
+  </div>
+</div>

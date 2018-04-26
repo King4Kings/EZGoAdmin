@@ -8,6 +8,8 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AgmCoreModule } from '@agm/core';
+import { AgmDirectionModule } from 'agm-direction';
+import { RightinfoService } from '../app/service/rightinfo.service'
 
 
 import { AppComponent } from './app.component';
@@ -17,6 +19,7 @@ import { HomeComponent } from './layout/home/home.component';
 import { LeftnavComponent } from './layout/leftnav/leftnav.component';
 import { DashboardComponent } from './components/dashboard/dashboard/dashboard.component';
 import { RightinfoComponent } from './layout/rightinfo/rightinfo/rightinfo.component';
+import { TripdirectionComponent } from './components/tripdirection/tripdirection.component';
 
 
 @NgModule({
@@ -27,7 +30,8 @@ import { RightinfoComponent } from './layout/rightinfo/rightinfo/rightinfo.compo
     HomeComponent,
     LeftnavComponent,
     DashboardComponent,
-    RightinfoComponent
+    RightinfoComponent,
+    TripdirectionComponent
   ],
   imports: [
     AppRoutingModule,
@@ -38,9 +42,13 @@ import { RightinfoComponent } from './layout/rightinfo/rightinfo/rightinfo.compo
     AngularFireAuthModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCOJu50WRJgFwfswb-rZqPviDOp_-pUEvk'
-    })
+    }),
+    AgmDirectionModule
   ],
-  providers: [AngularFirestoreModule],
+  providers: [
+    AngularFirestoreModule,
+    RightinfoService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

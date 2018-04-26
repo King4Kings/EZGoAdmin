@@ -25,7 +25,7 @@
                     <!-- <th scope="col">IPN</th> -->
                     <th scope="col">Start point</th>
                     <th scope="col">End point</th>
-                    <th scope="col">Date</th>
+                    <th scope="col">Trip Start Date</th>
               </tr>
             </thead>
             <tbody>
@@ -37,13 +37,15 @@
                   <td>{{item.trip.endAddress.city}}</td>
                   <td>{{item.trip.startTimeStamp}}</td>
                 </tr> -->
-                    <tr *ngFor="let trip of trips | async; let myIndex = index">
-                            <td>{{trip.id}}</td>
-                            <td>{{getUserName(myIndex)}}</td>
+                    <tr *ngFor="let trip of users | async; let myIndex = index">
+                            <!-- <td><button type="button" (click)="getTripDirection(trip.id)">{{trip.id}}</button></td> -->
+                            <td><a [routerLink]="['/dash', trip.trip_id]">{{trip.trip_id}}</a></td>
+                            <!-- <td>{{getUserName(myIndex)}}</td> -->
+                            <td>{{trip.user_id}}</td>
                             <!-- <td>{{getZid(myIndex)}}</td> -->
                             <td>{{trip.startAddress.city}}</td>
                             <td>{{trip.endAddress.city}}</td>
-                            <td>{{trip.startTimeStamp}}</td>
+                            <td>{{trip.start_date_time}}</td>
                             
                   </tr>
            </tbody>

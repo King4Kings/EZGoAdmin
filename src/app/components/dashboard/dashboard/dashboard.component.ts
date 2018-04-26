@@ -2,8 +2,10 @@ import { Component, Input, OnInit } from '@angular/core';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { AngularFireObject, AngularFireDatabase } from 'angularfire2/database';
 import { Observable } from 'rxjs/Observable';
+import { Router } from '@angular/router';
 import { TripList } from '../../../models/TripList';
 import { UserList } from '../../../models/UserList';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -19,42 +21,77 @@ export class DashboardComponent implements OnInit {
    searchText:string;
    @Input() loading: boolean = true;
    users: Observable<any>;
-   userList:UserList[];
+   userList:any;
    formatedUser = [];
 
-   ngOnInit() {
-  }
   // // constructor(db: AngularFireDatabase) {
   // //   this.trips = db.list('CabTrack/Trips/Trip').valueChanges()
   // //   console.log(this.trips);
   // // }
-   constructor(db: AngularFirestore) {
+   constructor(db: AngularFirestore, private router: Router, private route: ActivatedRoute) {
 
     this.trips = db.collection('Trips').valueChanges()
-    this.users = db.collection('Users').valueChanges()
-
+    this.users = db.collection('UserTrips').valueChanges()
 
     this.trips.subscribe(data => {
       this.triplist = data;
-      this.tableFormat()
+
+      for(var i=0;i < this.triplist.length;i++){
+        var totalTrips = this.triplist[i];
+        var tripId = totalTrips.id;
+        // this.getTripDirection(tripId)
+
+      }
+
+      for(var i=0; i<this.userList.length; i++) {
+        var usertrip = this.userList[i];
+        var test = this.userList[i].positions;
+
+        var tr =  usertrip.user_id + "_" + usertrip.trip_id; 
+        // var loc = { lat : lat, lng: lon }
+
+        var start = usertrip.startAddress;
+        var end  = usertrip.endAddress;
+
+      
+    }
+       
     }
     )
     this.users.subscribe(data => {
       this.userList = data
-      this.tableFormat()
+      // this.tableFormat()
     }
       
     )
+
   }
 
-  tableFormat() {
-    this.triplist.forEach(trip => {
-      let users = trip.users
-      users.forEach(user => {
-       this.formatedUser.push({"user": user, "trip": trip})
-      })
-    })
+   ngOnInit()  {
+  //   this.route.params.subscribe(
+  //     params => {
+  //         const id = +params['trip.id'];
+  //         console.log("===  ====", id)
+  //         //this.getMovie(id);
+  //     }
+  // );
+
+}
+
+  getTripDirection(tripId){
+
+    // this.router.navigate(['rightinfo'], { queryParams : {"tripId" : tripId}});
+
   }
+
+  // tableFormat() {
+  //   this.triplist.forEach(trip => {
+  //     let users = trip.users
+  //     users.forEach(user => {
+  //      this.formatedUser.push({"user": user, "trip": trip})
+  //     })
+  //   })
+  // }
 
   getUserName(index): string {
   //  console.log(triplist)

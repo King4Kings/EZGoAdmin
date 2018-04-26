@@ -1,5 +1,5 @@
 export class UserList {
-    zID:string;
-    position:any;
-
+    zID : any;
+    lat : any;
+    lng : any;
 }
