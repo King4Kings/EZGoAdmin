@@ -11,7 +11,8 @@ export class RightinfoService {
   private dbPath = 'UserTrips';
  
   totalusers: Observable<any>;
- 
+  userDetails: any;
+
   constructor(private db: AngularFirestore) {
     this.totalusers = db.collection(this.dbPath).valueChanges()
     this.totalusers.subscribe(data => {

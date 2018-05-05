@@ -5,35 +5,35 @@
           <!-- 1 start-->
           <div class="sum-info">
             <span class="ap-ic alert">&nbsp;</span>
-            <p><span class="value">1</span><span>Trips</span></p>
+            <p><span class="value">{{sosCount}}</span><span>Alerts</span></p>
             <small>Required Attention now</small>
           </div>
           <!--- 1 End --->
           <!-- 2 Start -->
           <div class="sum-info">
             <span class="ap-ic running">&nbsp;</span>
-            <p><span class="value">2</span><span>Trips</span></p>
+            <p><span class="value">{{markers.length}}</span><span>Live</span></p>
             <small>Currently running now</small>
           </div>
           <!--- 2 End --->
           <!-- 3 Start -->
           <div class="sum-info">
             <span class="ap-ic remaining">&nbsp;</span>
-            <p><span class="value">4</span><span>Trips</span></p>
+            <p><span class="value">100</span><span>Scheduled</span></p>
             <small>Remaining Trips today</small>
           </div>
           <!--- 3 End --->
           <!-- 4 Start -->
           <div class="sum-info">
             <span class="ap-ic finished">&nbsp;</span>
-            <p><span class="value">0</span><span>Trips</span></p>
+            <p><span class="value">0</span><span>Completed</span></p>
             <small>Finished Trips today</small>
           </div>
           <!--- 4 End --->
           <!--5 Start -->
           <div class="sum-info">
             <span class="ap-ic total">&nbsp;</span>
-            <p><span class="value">6</span><span>Trips</span></p>
+            <p><span class="value">{{markers.length}}</span><span>Today's Total</span></p>
             <small>Total Trips today</small>
           </div>
           <!-- 5 End -->	
@@ -81,9 +81,9 @@
         </agm-circle>   
       
 
-        <!-- <div *ngIf="showdirection"> -->
+        <div *ngIf="showdirection">
         <agm-direction *ngIf="dir" [origin]="dir.origin" [destination]="dir.destination"></agm-direction>
-        <!-- </div> -->
+        </div>
 
       </agm-map>
     </div>

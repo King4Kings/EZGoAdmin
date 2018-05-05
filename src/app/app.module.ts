@@ -18,6 +18,10 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { HomeComponent } from './layout/home/home.component';
 import { LeftnavComponent } from './layout/leftnav/leftnav.component';
 import { DashboardComponent } from './components/dashboard/dashboard/dashboard.component';
+import { AlertlogscreenComponent } from './components/alertlogscreen/alertlogscreen.component';
+import { FinishedscreenComponent } from './components/finishedscreen/finishedscreen.component';
+import { TriprequestscreenComponent } from './components/triprequestscreen/triprequestscreen.component';
+import { RemainingscreenComponent } from './components/remainingscreen/remainingscreen.component';
 import { RightinfoComponent } from './layout/rightinfo/rightinfo/rightinfo.component';
 import { TripdirectionComponent } from './components/tripdirection/tripdirection.component';
 
@@ -31,7 +35,11 @@ import { TripdirectionComponent } from './components/tripdirection/tripdirection
     LeftnavComponent,
     DashboardComponent,
     RightinfoComponent,
-    TripdirectionComponent
+    TripdirectionComponent,
+    AlertlogscreenComponent,
+    FinishedscreenComponent,
+    TriprequestscreenComponent,
+    RemainingscreenComponent
   ],
   imports: [
     AppRoutingModule,

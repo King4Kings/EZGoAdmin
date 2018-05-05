@@ -1,0 +1,287 @@
+<div id="content-region" class="main-section">
+  <app-rightinfo></app-rightinfo>
+
+
+  <div id="infoContent">
+    <div id="DashboardScreen" class="main-content mc-active">
+      <div class="container-fluide  cont-row">
+        <div class="col-lg-12* col-md-12* ">
+          <div class="section-bg">
+            <!--Page Title started here-->
+            <div class="title-hd">
+              <div class="right-float search-box ">
+                <input placeholder="Search ..." type="text" class="search form-control">
+              </div>
+              <h3>Alert Log</h3>
+            </div>
+            <!--End of the page title-->
+
+            <!--Table started here-->
+            <div class="in-cont-region">
+              <table class="table table-striped mrg-top">
+                <thead>
+                  <tr>
+                    <th scope="col">Trip ID</th>
+                    <th scope="col">Employee Name</th>
+                    <!-- <th scope="col">IPN</th> -->
+                    <th scope="col">Start point</th>
+                    <th scope="col">End point</th>
+                    <th scope="col">Trip Start Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- <tr *ngFor="let item of formatedUser">
+                            <td>{{item.trip.id}}</td>
+                            <td>{{item.user.name}}</td>
+                            <td>{{item.user.zID}}</td>
+                            <td>{{item.trip.startAddress.city}}</td>
+                            <td>{{item.trip.endAddress.city}}</td>
+                            <td>{{item.trip.startTimeStamp}}</td>
+                          </tr> -->
+                  <tr *ngFor="let trip of users | async; let myIndex = index">
+                    <!-- <td><button type="button" (click)="getTripDirection(trip.id)">{{trip.id}}</button></td> -->
+                    <td>
+                      <button type="button" [routerLink]="['/dash', trip.trip_id]">{{trip.trip_id}}</button>
+                    </td>
+                    <!-- <td>{{getUserName(myIndex)}}</td> -->
+                    <!-- <td><a (click)="getTripDirection(trip.trip_id)">{{trip.trip_id}} </a></td> -->
+                    <td>{{trip.user_id}}</td>
+                    <!-- <td>{{getZid(myIndex)}}</td> -->
+                    <td>{{trip.startAddress.city}}</td>
+                    <td>{{trip.endAddress.city}}</td>
+                    <td>{{trip.start_date_time}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!--Alert info side-->
+  <div id="alertContent">
+    <div class="cont-row">
+      <div class="title-hd">
+        <h3>Alert box </h3>
+      </div>
+      <div class="in-cont-region">
+        <!--1-->
+        <div class="alertbox">
+          <div class="fl-row">
+            <p class="al-id-info">
+              <small>Alert id</small>
+              <a href="">
+                <span>#id123468</span>
+              </a>
+            </p>
+            <p class="al-type-info">
+              <small>Alert type</small>
+              <span>Suspicious Route</span>
+            </p>
+          </div>
+          <h4>5
+            <small>mins ago</small>
+          </h4>
+          <div class="act-bt-reg">
+            <a class="act-btn monitor-trip" title="Trip Monitor">
+              <span>Trip
+                <small>Monitor</small>
+              </span>
+            </a>
+            <a class="act-btn call-driver" title="Call Driver">
+              <span>Call
+                <small>Driver</small>
+              </span>
+            </a>
+            <a class="act-btn call-emp" title="Call Passenger">
+              <span>Call
+                <small>Passenger</small>
+              </span>
+            </a>
+            <a class="act-btn arrange-help" title="Plan Help">
+              <span>Plan
+                <small>Help</small>
+              </span>
+            </a>
+          </div>
+
+        </div>
+        <!--1-->
+        <!----2-->
+        <div class="alertbox">
+          <div class="fl-row">
+            <p class="al-id-info">
+              <small>Alert id</small>
+              <a href="">
+                <span>#id123468</span>
+              </a>
+            </p>
+            <p class="al-type-info">
+              <small>Alert type</small>
+              <span>Suspicious Route</span>
+            </p>
+          </div>
+          <h4>5
+            <small>mins ago</small>
+          </h4>
+          <div class="act-bt-reg">
+            <a class="act-btn monitor-trip" title="Trip Monitor">
+              <span>Trip
+                <small>Monitor</small>
+              </span>
+            </a>
+            <a class="act-btn call-driver" title="Call Driver">
+              <span>Call
+                <small>Driver</small>
+              </span>
+            </a>
+            <a class="act-btn call-emp" title="Call Passenger">
+              <span>Call
+                <small>Passenger</small>
+              </span>
+            </a>
+            <a class="act-btn arrange-help" title="Plan Help">
+              <span>Plan
+                <small>Help</small>
+              </span>
+            </a>
+          </div>
+
+        </div>
+        <!----2-->
+        <!----3-->
+        <div class="alertbox">
+          <div class="fl-row">
+            <p class="al-id-info">
+              <small>Alert id</small>
+              <a href="">
+                <span>#id123468</span>
+              </a>
+            </p>
+            <p class="al-type-info">
+              <small>Alert type</small>
+              <span>Suspicious Route</span>
+            </p>
+          </div>
+          <h4>5
+            <small>mins ago</small>
+          </h4>
+          <div class="act-bt-reg">
+            <a class="act-btn monitor-trip" title="Trip Monitor">
+              <span>Trip
+                <small>Monitor</small>
+              </span>
+            </a>
+            <a class="act-btn call-driver" title="Call Driver">
+              <span>Call
+                <small>Driver</small>
+              </span>
+            </a>
+            <a class="act-btn call-emp" title="Call Passenger">
+              <span>Call
+                <small>Passenger</small>
+              </span>
+            </a>
+            <a class="act-btn arrange-help" title="Plan Help">
+              <span>Plan
+                <small>Help</small>
+              </span>
+            </a>
+          </div>
+
+        </div>
+        <!----3-->
+        <!----4-->
+        <div class="alertbox">
+          <div class="fl-row">
+            <p class="al-id-info">
+              <small>Alert id</small>
+              <a href="">
+                <span>#id123468</span>
+              </a>
+            </p>
+            <p class="al-type-info">
+              <small>Alert type</small>
+              <span>Suspicious Route</span>
+            </p>
+          </div>
+          <h4>5
+            <small>mins ago</small>
+          </h4>
+          <div class="act-bt-reg">
+            <a class="act-btn monitor-trip" title="Trip Monitor">
+              <span>Trip
+                <small>Monitor</small>
+              </span>
+            </a>
+            <a class="act-btn call-driver" title="Call Driver">
+              <span>Call
+                <small>Driver</small>
+              </span>
+            </a>
+            <a class="act-btn call-emp" title="Call Passenger">
+              <span>Call
+                <small>Passenger</small>
+              </span>
+            </a>
+            <a class="act-btn arrange-help" title="Plan Help">
+              <span>Plan
+                <small>Help</small>
+              </span>
+            </a>
+          </div>
+
+        </div>
+        <!----4-->
+        <!----5-->
+        <div class="alertbox">
+          <div class="fl-row">
+            <p class="al-id-info">
+              <small>Alert id</small>
+              <a href="">
+                <span>#id123468</span>
+              </a>
+            </p>
+            <p class="al-type-info">
+              <small>Alert type</small>
+              <span>Suspicious Route</span>
+            </p>
+          </div>
+          <h4>5
+            <small>mins ago</small>
+          </h4>
+          <div class="act-bt-reg">
+            <a class="act-btn monitor-trip" title="Trip Monitor">
+              <span>Trip
+                <small>Monitor</small>
+              </span>
+            </a>
+            <a class="act-btn call-driver" title="Call Driver">
+              <span>Call
+                <small>Driver</small>
+              </span>
+            </a>
+            <a class="act-btn call-emp" title="Call Passenger">
+              <span>Call
+                <small>Passenger</small>
+              </span>
+            </a>
+            <a class="act-btn arrange-help" title="Plan Help">
+              <span>Plan
+                <small>Help</small>
+              </span>
+            </a>
+          </div>
+
+        </div>
+        <!----5-->
+
+      </div>
+    </div>
+    <!--Alert info Side ends here-->
+
+  </div>

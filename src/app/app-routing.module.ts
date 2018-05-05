@@ -8,14 +8,20 @@ import { HomeComponent } from './layout/home/home.component';
 import { DashboardComponent } from './components/dashboard/dashboard/dashboard.component';
 import { RightinfoComponent } from './layout/rightinfo/rightinfo/rightinfo.component';
 import { TripdirectionComponent } from './components/tripdirection/tripdirection.component';
+import { RemainingscreenComponent } from './components/remainingscreen/remainingscreen.component';
+import { FinishedscreenComponent } from './components/finishedscreen/finishedscreen.component';
+import { TriprequestscreenComponent } from './components/triprequestscreen/triprequestscreen.component';
+import { AlertlogscreenComponent } from './components/alertlogscreen/alertlogscreen.component';
 
 const appRoutes: Routes = [
     { path: '', component: DashboardComponent},
-    { path: 'dash/:trip.id', component: DashboardComponent}
+    // { path: 'dashboard/:trip_id', component: DashboardComponent},
+    { path: 'dash/:trip_id', component: DashboardComponent},
     // { path: 'tripdirection', component: TripdirectionComponent },
-    // { path: 'rightinfo', component: RightinfoComponent }
-    
-
+    { path: 'finishedScreen', component: FinishedscreenComponent},
+    { path: 'remainingScreen', component: RemainingscreenComponent},
+    { path: 'triprequestScreen', component: TriprequestscreenComponent},
+    { path: 'alertlogScreen', component: AlertlogscreenComponent}
 ];
 
 @NgModule({

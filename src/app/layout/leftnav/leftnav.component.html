@@ -1,25 +1,28 @@
 	<!--- Side menu starts here ---->
-<nav id="sidebar">
+<nav id="sidebar-">
 	<div id="Side-nav" class="">
 		<!-- <h3><span>&nbsp;</span></h3> -->
 		<div id="Side-nav-head">
 			<a id="AppLogo"><span>&nbsp;</span></a>
+			<a class="nav--mobile-trigger">
+				Menu <i></i><i></i><i></i>
+			</a> 
 		</div>
 		<ul class="side-nav">
-			<li class="m-active">
-			<a href="#" [routerLink]="['/dashboardScreen']" routerLinkActive="active">Dashboard</a>
+			<li class="m-active"> 
+			<a href="#" [routerLink]="['']" routerLinkActive="active"><span class="icon ic-dash">&nbsp;</span><span>Dashboard</span></a>
 			</li>
 			<li class="RemainingScr">
-			<a href="#" [routerLink]="['/finishedScreen']" routerLinkActive="active">Finished Trips</a>
+			<a href="#" [routerLink]="['/finishedScreen']" routerLinkActive="active"><span class="icon ic-finish">&nbsp;</span><span>Finished Trips</span></a>
 			</li>
 			<li class="RemainingScr">
-			<a href="#" [routerLink]="['/remainingScreen']" routerLinkActive="active">Remaining Trips</a>
+			<a href="#" [routerLink]="['/remainingScreen']" routerLinkActive="active"><span class="icon ic-remain">&nbsp;</span><span>Remaining Trips </span></a>
 			</li>
 			<li class="TriprequestScr">
-			<a href="#" [routerLink]="['/triprequestScreen']" routerLinkActive="active">Trip request</a>
+			<a href="#" [routerLink]="['/triprequestScreen']" routerLinkActive="active"><span class="icon ic-request">&nbsp;</span><span>Trip request</span> </a>
 			</li>
 			<li class="AlertlogScr">
-			<a href="#" [routerLink]="['/alertlogScreen']" routerLinkActive="active">Alert log</a>
+			<a href="#" [routerLink]="['/alertlogScreen']" routerLinkActive="active"><span class="icon ic-alert">&nbsp;</span><span>Alert log</span></a>
 			</li>
 			<!-- <li class="m-active"><a id="DashboardScr" content="DashboardScreen"><span>Dashboard</span></a></li> -->
 			<!-- <li><a id="FinishedScr" content="FinishedScreen"><span>Finished Trips</span></a></li>

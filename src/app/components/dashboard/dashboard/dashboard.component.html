@@ -1,60 +1,67 @@
 <div id="content-region" class="main-section">
 <app-rightinfo></app-rightinfo>
-<!-- <div class="infoContent"> -->
+<div id="infoContent">
 <div id="DashboardScreen" class="main-content mc-active">
-<div class="container-fluide">
-    <div class="col-lg-12 col-md-12 ">
+<div class="container-fluide  cont-row">
+    <div class="col-lg-12* col-md-12* ">
         <div class="section-bg">
           <!--Page Title started here-->
-          <div class="row pg-header">
-            <div class="col col-md-4 col-lg-4 ">
-              <h1>Current Trips</h1>
-          </div>
-            <div class="col col-md-8 col-lg-8 text-right ">
-              <input placeholder="Search ..." type="text" class="search form-control">
-            </div>
+          <div class="title-hd">
+              <div class="right-float search-box ">
+                  <input placeholder="Search ..." type="text" class="search form-control">
+               </div>
+              <h3>Current Trips</h3>
           </div>
           <!--End of the page title-->
     
           <!--Table started here-->
-          <table class="table table-striped mrg-top">
-            <thead>
-              <tr>
-                    <th scope="col">Trip ID</th>
-                    <th scope="col">Employee Name</th>
-                    <!-- <th scope="col">IPN</th> -->
-                    <th scope="col">Start point</th>
-                    <th scope="col">End point</th>
-                    <th scope="col">Trip Start Date</th>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- <tr *ngFor="let item of formatedUser">
-                  <td>{{item.trip.id}}</td>
-                  <td>{{item.user.name}}</td>
-                  <td>{{item.user.zID}}</td>
-                  <td>{{item.trip.startAddress.city}}</td>
-                  <td>{{item.trip.endAddress.city}}</td>
-                  <td>{{item.trip.startTimeStamp}}</td>
-                </tr> -->
-                    <tr *ngFor="let trip of users | async; let myIndex = index">
-                            <!-- <td><button type="button" (click)="getTripDirection(trip.id)">{{trip.id}}</button></td> -->
-                            <td><a [routerLink]="['/dash', trip.trip_id]">{{trip.trip_id}}</a></td>
-                            <!-- <td>{{getUserName(myIndex)}}</td> -->
-                            <td>{{trip.user_id}}</td>
-                            <!-- <td>{{getZid(myIndex)}}</td> -->
-                            <td>{{trip.startAddress.city}}</td>
-                            <td>{{trip.endAddress.city}}</td>
-                            <td>{{trip.start_date_time}}</td>
-                            
-                  </tr>
-           </tbody>
-        </table>
+          <div class="in-cont-region">
+              <table class="table table-striped mrg-top">
+                  <thead>
+                    <tr>
+                          <th scope="col">Trip ID</th>
+                          <th scope="col">Employee Name</th>
+                          <!-- <th scope="col">IPN</th> -->
+                          <th scope="col">Start point</th>
+                          <th scope="col">End point</th>
+                          <th scope="col">Trip Start Date</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- <tr *ngFor="let item of formatedUser">
+                        <td>{{item.trip.id}}</td>
+                        <td>{{item.user.name}}</td>
+                        <td>{{item.user.zID}}</td>
+                        <td>{{item.trip.startAddress.city}}</td>
+                        <td>{{item.trip.endAddress.city}}</td>
+                        <td>{{item.trip.startTimeStamp}}</td>
+                      </tr> -->
+                          <tr *ngFor="let trip of users | async; let myIndex = index">
+                                  <!-- <td><button type="button" (click)="getTripDirection(trip.id)">{{trip.id}}</button></td> -->
+                                <td><button type="button" [routerLink]="['/dash', trip.trip_id]">{{trip.trip_id}}</button></td>
+                                  <!-- <td>{{getUserName(myIndex)}}</td> -->
+                                  <!-- <td><a (click)="getTripDirection(trip.trip_id)">{{trip.trip_id}} </a></td> -->
+      
+                                  <td>{{trip.user_id}}</td>
+                                  <!-- <td>{{getZid(myIndex)}}</td> -->
+                                  <td>{{trip.startAddress.city}}</td>
+                                  <td>{{trip.endAddress.city}}</td>
+                                  <td>{{trip.start_date_time}}</td>
+                                  
+                        </tr>
+                 </tbody>
+              </table>    
+
+
+          </div>
+          
+      </div>
+    </div>
 
     
-      </div>
-    
-    </div>
+			</div>
+
+</div>
 
 <!-- <table class="table">
         <caption>List of Cabs and Users</caption>
@@ -81,6 +88,43 @@
           </tr>
           </tbody>
         </table> -->
+
 </div>
+ <!--Alert info side-->
+ <!--
+ <div *ngFor="let alerts of alertJson" style="border:1px solid red;">
+ <h4>{{alerts.SOS.severity}}</h4>
+ </div>
+-->
+
+ <div id="alertContent">
+    <div class="cont-row">
+      <div class="title-hd">
+        <h3>Alert box </h3>
+      </div>
+      <div class="in-cont-region">
+        <!--1-->
+        <div *ngFor="let alerts of alertJson">
+        <div class="alertbox">
+          <div class="fl-row">
+            <p class="al-id-info">
+              <small>Alert id</small>
+              <a href=""><span>#id123468</span></a>
+            </p>
+            <p class="al-type-info">
+              <small>Alert type</small>
+              <span>{{getAlertType(alerts.SOS.severity)}}</span>
+            </p>
+          </div>
+          <h4>5 <small>mins ago</small></h4>
+          <div class="act-bt-reg">
+            <a class="act-btn monitor-trip" title="Trip Monitor"><span>Trip <small>Monitor</small></span></a>
+            <a class="act-btn call-driver" title="Call Driver"><span>Call <small>Driver</small></span></a>
+            <a class="act-btn call-emp" title="Call Passenger"><span>Call <small>Passenger</small></span></a>
+            <a class="act-btn arrange-help" title="Plan Help"><span>Plan <small>Help</small></span></a>
+          </div>      
+        </div>
+        </div>
+    </div>
 </div>
 </div>

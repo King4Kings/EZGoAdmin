@@ -1,2 +1,11 @@
 
-body { background: #fff; font-family: 'Rajdhani', Verdana, arial, sans-serif;  }
+body { background: #fff; font-family:Read,'Rajdhani', Verdana, arial, sans-serif; font-size:12px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+@font-face{font-family:Read;src:url(../fonts/Read-Light_V1100.woff2) format("woff2"),url(../fonts/Read-Light_V1100.woff) format("woff");font-weight:300;font-style:normal;}
+@font-face{font-family:Read;src:url(../fonts/Read-Regular_V1100.woff2) format("woff2"),url(../fonts/Read-Regular_V1100.woff) format("woff");font-weight:400;font-style:normal;}
+@font-face{font-family:Read;src:url(../fonts/Read-Medium_V1100.woff2) format("woff2"),url(../fonts/Read-Medium_V1100.woff) format("woff"); font-weight:500; font-style:normal;}
+@font-face{font-family:Read;src:url(../fonts/Read-Bold_V1100.woff2) format("woff2"),url(../fonts/Read-Bold_V1100.woff) format("woff");font-weight:700;font-style:normal;}
+
+@font-face{font-family:Sweet sans;src:url(../fonts/SweetSans-Bold.woff2) format("woff2"),url(../fonts/SweetSans-Bold.woff) format("woff");font-weight:700;font-style:normal;}
+@font-face{font-family:Sweet sans;src:url(../fonts/SweetSans-Medium.woff2) format("woff2"),url(../fonts/SweetSans-Medium.woff) format("woff");font-weight:500;font-style:normal;}
+@font-face{font-family:Sweet sans;src:url(../fonts/SweetSans-Regular.woff2) format("woff2"),url(../fonts/SweetSans-Regular.woff) format("woff");font-weight:400;font-style:normal;}

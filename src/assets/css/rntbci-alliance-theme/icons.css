@@ -1,0 +1,10 @@
+ul.side-nav li a span.icon { position: absolute; width: 3rem; height: 2.75rem; display: block; left: auto; right: 1rem; top: 0;  bottom: 0; margin: auto;}
+ul.side-nav li a span.icon { background-color: #fff; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-size: contain; mask-size: contain; -webkit-mask-position: center;mask-position: center; }
+ul.side-nav li.m-active a span.icon { background-color: #fc3; }
+ul.side-nav li a:hover span.icon { background-color: #999; }
+
+ul.side-nav li a span.icon.ic-dash { -webkit-mask-image: url('../../images/ic_dash.svg'); mask-image: url('../../images/ic_dash.svg');   }
+ul.side-nav li a span.icon.ic-finish { -webkit-mask-image: url('../../images/ic_finish.svg'); mask-image: url('../../images/ic_finish.svg');   }
+ul.side-nav li a span.icon.ic-remain { -webkit-mask-image: url('../../images/ic_remain.svg'); mask-image: url('../../images/ic_remain.svg');   }
+ul.side-nav li a span.icon.ic-request { -webkit-mask-image: url('../../images/ic_request.svg'); mask-image: url('../../images/ic_request.svg');   }
+ul.side-nav li a span.icon.ic-alert { -webkit-mask-image: url('../../images/ic_log.svg'); mask-image: url('../../images/ic_log.svg');   }

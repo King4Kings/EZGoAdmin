@@ -3,7 +3,7 @@ import { GoogleMapsAPIWrapper, AgmMap, LatLngBounds, LatLngBoundsLiteral} from '
 import { AngularFirestore } from 'angularfire2/firestore';
 import { AngularFireObject, AngularFireDatabase } from 'angularfire2/database';
 import { Observable } from 'rxjs/Observable';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute,Router } from '@angular/router';
 import { TripList } from '../../../models/TripList';
 import { UserList } from '../../../models/UserList';
 import { RightinfoService } from '../../../service/rightinfo.service'
@@ -32,17 +32,19 @@ export class RightinfoComponent implements OnInit,AfterViewInit  {
   triplist:TripList[];
   userList:any;
 
-    zoom: number = 14;
+    zoom: number = 8;
     // initial center position for the map
     lat : number= 12.73377 ;
     lon : number= 80.011268 ;
-    
+    sos: Observable<any>;
+    sosJson: [any];
+    sosCount = 0;
 
-    constructor(db: AngularFirestore, private route: ActivatedRoute, private rightinfoService : RightinfoService) {
+    constructor(public db: AngularFirestore, private route: ActivatedRoute, private rightinfoService : RightinfoService, public router :Router) {
 
       this.totaltrips = db.collection('Trips').valueChanges()
       this.totalusers = db.collection('UserTrips').valueChanges()
-  
+      this.configureSOS();
       // this.addMarkerData(this.totalusers)
       this.totaltrips.subscribe(data => {
         this.triplist = data;
@@ -76,11 +78,14 @@ export class RightinfoComponent implements OnInit,AfterViewInit  {
           console.log("start", start);
           console.log("end", end);
           
-           this.addMarkerUserTrip(tripId,lat,lon)
+          if (usertrip.is_completed == 1) {
+            this.addMarkerUserTrip(tripId,lat,lon)
+
+          }
 
            
 
-           this.getDirection(tripId,start,end)
+          //  this.getDirection(tripId,start,end)
           // this.getPosition(lat,lon);
             
           
@@ -110,20 +115,52 @@ export class RightinfoComponent implements OnInit,AfterViewInit  {
         })
     }
 
+    configureSOS() {
+      this.sos = this.db.collection('SOS').valueChanges()
+    
+      this.sos.subscribe(data => {
+        this.sosJson = data
+        this.sosCount = this.sosJson.length;
+      })
+    }
+
     ngOnInit(): void {
-      this.route.params.subscribe( params => console.log(params));
+      this.route.params.subscribe( params =>{
+        console.log("url values " ,params)
+        if (params.trip_id === undefined ) {  
+          this.showdirection = false;
+          return;
+        }
+
+        var tripId = params.trip_id;
+        var myTrip = this.rightinfoService.userDetails;
+
+        var myTrip = this.rightinfoService.userDetails.filter(element => {
+          return element.trip_id == tripId
+        });
+       
+        if (myTrip.length > 0) {
+          var realTrip = myTrip[0];
+          var start = realTrip.startAddress;
+          var end = realTrip.endAddress;
+          this.getDirection(start,end);
+        }
+        
+      }
+      );
+      // this.route.snapshot.queryParams.subscribe( params => console.log(params));
   }
 
     dir = undefined;
 
-    private getDirection(tripId,start,end) {
-      // this.showdirection = true;
-      if(tripId != undefined){
+    private getDirection(start,end) {
+      this.showdirection = true;
+      // if(tripId != undefined){
       this.dir = {
         origin: { lat: start.lat , lng: start.long },
         destination: { lat: end.lat, lng: end.long }
       }
-    }
+    // }
     }
 
   addMarkerUserTrip(userTripId, lat, lng) {

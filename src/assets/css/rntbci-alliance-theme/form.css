@@ -3,4 +3,11 @@
 */
 input, select, button, textarea {  font-family: 'Rajdhani', Verdana, arial, sans-serif; } 
 
-button, .button { border: 1px solid; line-height: 1.5rem; padding: 0 1rem; font-weight: 700; font-size: 1.0125rem; cursor: pointer; }
+button, .button { border: 1px solid; line-height: 1.25rem; padding: 0 1rem; font-weight: 700; font-size: 0.75rem; cursor: pointer; }
+
+#wrapper table th, #wrapper table td {
+    padding:0.25rem  0.75rem!important;
+    vertical-align: middle;
+    border-top: 1px solid #dee2e6;
+    font-size: 0.875rem !important;
+}
